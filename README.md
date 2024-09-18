@@ -4,19 +4,19 @@
 
 - [ ] **Install PHP:**  
     Download the latest version as a zipped folder from [here](https://windows.php.net/download/) and extract it. Place the folder in `Program Files`. Verify the installation by running the following command:
-    ```bash
+    ```
     php -v
     ```
 
 - [ ] **Install Node.js:**  
     Download and run `node.exe` from [here](https://nodejs.org/en/download/prebuilt-installer). Verify the installation by running the following command:
-    ```bash
+    ```
     node -v
     ```
 
 - [ ] **Install Composer:**  
     Download and run `Composer-Setup.exe` from [here](https://getcomposer.org/doc/00-intro.md#using-the-installer). Make sure PHP is already installed before this step. Verify the installation by running the following command:
-    ```bash
+    ```
     composer -v
     ```
 
@@ -42,41 +42,43 @@
 
 ## 2) Create A Project
 
-1. **Create a Laravel project from the command prompt:**
-    ```bash
+i. **Create a Laravel project from the command prompt:**
+    ```
     cd ~/Herd
     laravel new my-app
     cd my-app
     ```
+![Screenshot 2024-09-18 232712](https://github.com/user-attachments/assets/176e4db9-ffe5-4438-94aa-5b47cbab3c10)
 
-2. **Project Setup:**
+ii. **Project Setup:**
     - Open the project folder (`my-app`) in VS Code. Path: `C:\Users\your_user_name\Herd\my-app`.
     - From your terminal, run the following commands:
 
-    ```bash
+    ```
     composer install
     npm install
     cp .env.example .env
     php artisan key:generate
     ```
 
-3. **Setup Mailtrap in the `.env` file:**
+iii. **Setup Mailtrap in the `.env` file:**
     - Log in to [Mailtrap](https://mailtrap.io/) using your GitHub account.
     - Choose **Email Testing**, then select **My Inbox**.
     - Select **PHP > Laravel 9+**, and copy the API mailer settings.
     - Replace the mail settings in your `.env` file with the Mailtrap settings.
+![Screenshot 2024-09-18 234258](https://github.com/user-attachments/assets/8d24a9ff-87bb-4437-81ca-0a2606544833)
 
-4. **Setup the database in `.env`.**
+iv. **Setup the database in `.env`.**
 
-5. **Run the following commands:**
-    ```bash
+v. **Run the following commands:**
+    ```
     php artisan optimize:clear
     php artisan migrate:fresh --seed
     ```
 
-6. **View your Laravel project:**
+vi. **View your Laravel project:**
     - Run the following command:
-    ```bash
+    ```
     php artisan serve
     ```
     - Alternatively, type `my-app.test` in your browser. Make sure both DBngin and Laravel Herd are running.

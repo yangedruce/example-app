@@ -23,8 +23,8 @@
 - [ ] **Install VS Code:**  
     Download the zipped version from [here](https://code.visualstudio.com/download) and extract it. Run `code.exe`.
 
-- [ ] **Install Laravel Herd:**  
-    Download from [here](https://herd.laravel.com/windows) and run the `.exe` file to install. You can also install Node.js and PHP using Herd. **Important:** Every time you need to run a Laravel project, click the "Start All Services" button.
+- [ ] **Install Laragon:**  
+    Download from [here](https://laragon.org/download/) and run the `.exe` file to install. **Important:** Every time you need to run a Laravel project, click the "Start All" button.
 
 - [ ] **Install DBngin and TablePlus:**  
     - Download DBngin for Windows from [here](https://dbngin.com/).
@@ -42,16 +42,14 @@
 
 ## 2) Create A Project
 
-i. **Create a Laravel project from the command prompt:**
+i. **Create a Laravel project from the terminal. Click the terminal button on Laragon and run command:**
+    
     ```
-    cd ~/Herd
-    laravel new my-app
-    cd my-app
+    composer create-project laravel/laravel example-app
     ```
-![Screenshot 2024-09-18 232712](https://github.com/user-attachments/assets/176e4db9-ffe5-4438-94aa-5b47cbab3c10)
 
 ii. **Project Setup:**
-    - Open the project folder (`my-app`) in VS Code. Path: `C:\Users\your_user_name\Herd\my-app`.
+    - Open the project folder (`example-app`) in VS Code. Path: `C:\laragon\www\example-app`.
     - From your terminal, run the following commands:
 
     ```
@@ -62,23 +60,32 @@ ii. **Project Setup:**
     ```
 
 iii. **Setup Mailtrap in the `.env` file:**
-    - Log in to [Mailtrap](https://mailtrap.io/) using your GitHub account.
-    - Choose **Email Testing**, then select **My Inbox**.
-    - Select **PHP > Laravel 9+**, and copy the API mailer settings.
-    - Replace the mail settings in your `.env` file with the Mailtrap settings.
+- Log in to [Mailtrap](https://mailtrap.io/) using your GitHub account.
+- Choose **Email Testing**, then select **My Inbox**.
+- Select **PHP > Laravel 9+**, and copy the API mailer settings.
+- Replace the mail settings in your `.env` file with the Mailtrap settings.
+
+![Screenshot 2024-09-19 004829](https://github.com/user-attachments/assets/92bd10ee-16b0-47a1-b625-6172acfdb5e2)
+
+
 ![Screenshot 2024-09-18 234258](https://github.com/user-attachments/assets/8d24a9ff-87bb-4437-81ca-0a2606544833)
+
 
 iv. **Setup the database in `.env`.**
 
+![Screenshot 2024-09-19 004936](https://github.com/user-attachments/assets/84ac9d71-6a14-4242-a51b-0ebb48cb2b07)
+
+
 v. **Run the following commands:**
+
     ```
     php artisan optimize:clear
     php artisan migrate:fresh --seed
     ```
 
 vi. **View your Laravel project:**
-    - Run the following command:
+- Run the following command:
     ```
     php artisan serve
     ```
-    - Alternatively, type `my-app.test` in your browser. Make sure both DBngin and Laravel Herd are running.
+- Alternatively, type `example-app.test` in your browser. Make sure both DBngin and Laragon are running.

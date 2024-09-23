@@ -105,7 +105,7 @@ This will create a 'tailwind.config.js' file.
 Install Alpine.js:
     
     ```
-    npm install alpinjs
+    npm install alpinejs
     ```
 
 ## 2) Configure tailwind.config.js

@@ -89,3 +89,83 @@ vi. **View your Laravel project:**
     php artisan serve
     ```
 - Alternatively, type `example-app.test` in your browser. Make sure both DBngin and Laragon are running.
+
+
+# Week 2: Familiarize with Tech Stack: TailwindCSS & AlpineJS
+
+## 1) Install TailwindCSS, Alpine.js, and their dependencies
+
+    ```
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init
+    ```
+
+This will create a 'tailwind.config.js' file.
+
+Install Alpine.js:
+    
+    ```
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init
+    ```
+
+## 2) Configure tailwind.config.js
+
+Update the content section in your tailwind.config.js file to include your Laravel blade files, Vue components, and other front-end files where you'll use Tailwind classes:
+
+![Screenshot 2024-09-23 234304](https://github.com/user-attachments/assets/60eb42e3-dc57-47cc-b4a2-303fc62dc753)
+
+
+## 3) Create CSS and JavaScript Entry Points
+
+In resources/css/app.css, add the TailwindCSS directives:
+
+![Screenshot 2024-09-23 234328](https://github.com/user-attachments/assets/392eedbf-236d-48e5-ba35-69c10faf884c)
+
+
+In resources/js/app.js, import Alpine.js:
+
+![Screenshot 2024-09-23 235044](https://github.com/user-attachments/assets/3f010c4e-8f1b-4607-8363-59406c129f47)
+
+
+## 4) Update vite.config.js
+
+![Screenshot 2024-09-23 235145](https://github.com/user-attachments/assets/cdb45398-4a21-4fb2-9526-ff02cde0594f)
+
+
+## 5) Set up the layout (app.blade.php)
+
+In your Laravel app, create the layout file at resources/views/layouts/app.blade.php:
+
+![Screenshot 2024-09-23 234453](https://github.com/user-attachments/assets/1949eedc-2786-4e57-97bb-678ae8df7b5b)
+
+This layout includes Vite for asset management, and a basic Blade template structure with @yield for inserting content.
+
+
+## 6) Create a new view (e.g., home.blade.php)
+
+Create a new view file in resources/views and call it home.blade.php:
+
+![Screenshot 2024-09-23 234517](https://github.com/user-attachments/assets/7a07cca2-ed8b-4ea3-b11b-27f1bf014b01)
+
+This home.blade.php view file extends the app.blade.php layout and defines a simple homepage with a TailwindCSS-styled button and Alpine.js interactivity.
+
+
+## 7) Update your route to return this new view
+
+In routes/web.php, update the / route to return the home view instead of welcome:
+
+![Screenshot 2024-09-23 234549](https://github.com/user-attachments/assets/0503ef34-e13f-48b6-9ad8-2e1296a911ff)
+
+Or, alternatively, you make new route /home:
+
+![Screenshot 2024-09-23 235955](https://github.com/user-attachments/assets/34324d48-d97e-46c6-9cc1-52c5d18432da)
+
+So when you open the link: [example-app.test/home](http://example-app.test/home)
+
+
+
+
+
+
+
